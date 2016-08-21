@@ -21,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,17 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
         // Find the View that shows the numbers category
         TextView numbers = (TextView) findViewById(R.id.numbers);
-
-        // Set a click listener on that View
         numbers.setOnClickListener(new OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
             public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_LONG).show();
                 // Create a new intent to open the {@link NumbersActivity}
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-
+                Intent numberIntent = new Intent(view.getContext(), NumbersActivity.class);
                 // Start the new activity
-                startActivity(numbersIntent);
+                startActivity(numberIntent);
             }
         });
 
@@ -55,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the family category is clicked on.
             @Override
             public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Open the list of family", Toast.LENGTH_LONG).show();
                 // Create a new intent to open the {@link FamilyActivity}
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
 
@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the colors category is clicked on.
             @Override
             public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_LONG).show();
                 // Create a new intent to open the {@link ColorsActivity}
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
 
@@ -87,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the phrases category is clicked on.
             @Override
             public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Open the list of phares", Toast.LENGTH_LONG).show();
                 // Create a new intent to open the {@link PhrasesActivity}
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
 
