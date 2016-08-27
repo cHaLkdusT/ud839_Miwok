@@ -8,6 +8,14 @@ public class Word {
     private String mMiwokTranslation;
     /** Default translation for the word */
     private String mDefaultTranslation;
+    /** Image resource ID */
+    private int mImageResourceId;
+
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId) {
+        this.mDefaultTranslation = defaultTranslation;
+        this.mMiwokTranslation = miwokTranslation;
+        this.mImageResourceId = imageResourceId;
+    }
 
     public Word(String defaultTranslation, String miwokTranslation) {
         this.mDefaultTranslation = defaultTranslation;
@@ -44,5 +52,21 @@ public class Word {
      */
     private void setDefaultTranslation(String mDefaultTranslation) {
         this.mDefaultTranslation = mDefaultTranslation;
+    }
+
+    /**
+     * Get the image resource id for this word
+     * @return
+     */
+    public int getmImageResourceId() {
+        return mImageResourceId;
+    }
+
+    /**
+     * We don't want this to be called outside this class
+     * @param mImageResourceId Image resource ID
+     */
+    public void setmImageResourceId(int mImageResourceId) {
+        this.mImageResourceId = mImageResourceId;
     }
 }
