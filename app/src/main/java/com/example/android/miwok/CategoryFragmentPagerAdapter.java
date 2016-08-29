@@ -7,9 +7,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Created by jlundang on 29/08/2016.
  */
-public class MiwokFragmentPagerAdapter extends FragmentPagerAdapter {
+public class CategoryFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    public MiwokFragmentPagerAdapter(FragmentManager fm) {
+    public CategoryFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
